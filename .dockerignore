@@ -1,0 +1,31 @@
+# Ignorer les dossiers virtuels Python
+venv/
+.venv/
+
+# Ignorer les fichiers et dossiers temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Ignorer les fichiers d'environnement (TRÈS IMPORTANT pour la sécurité)
+.env
+.env.production
+
+# Ignorer les fichiers Git
+.git/
+.gitignore
+
+# Ignorer les fichiers de test
+tests/
+pytest.ini
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers de build ou d’éditeur
+.vscode/
+.idea/
+*.swp
