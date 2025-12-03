@@ -39,11 +39,14 @@ jobs:
           SECRET_KEY: "test-secret"
           DATABASE_URL: "sqlite:///:memory:"
         run: |
-          # 1. Lancer l'app Flask en arrière-plan pour les tests E2E
-          python app.py &
-          # 2. Attendre quelques secondes que le serveur démarre
-          sleep 5
-          # 3. Lancer les tests (xvfb-run simule un écran pour Selenium/Firefox)
+          # IMPORTANT : On ajoute le dossier courant (.) au chemin Python
+          # Cela permet à "app/app.py" de faire "from app.extensions import..." sans erreur
+          export PYTHONPATH=$PYTHONPATH:.
+          # 1. On lance l'app Flask en arrière-plan (note le dossier app/)
+          python app/app.py &
+          # 2. Attendre que le serveur démarre
+          sleep 5  
+          # 3. Lancer les tests
           xvfb-run pytest
 
   # JOB 2 : BUILD & PUSH DOCKER
