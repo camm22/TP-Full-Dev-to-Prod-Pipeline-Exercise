@@ -1,23 +1,56 @@
-# TP-Full-Dev-to-Prod-Pipeline-Exercise
+# TP-01 - Machine Learning in Production: Full-Dev-to-Prod-Pipeline-Exercise
 
-New TP Camille Bordes
+**Author:** Camille Bordes
 
-Comment lancer les tests ?
+**Email:** [camille.bordes@efrei.net](mailto:camille.bordes@efrei.net)
 
- 1.  **Assure-toi que ton venv est activé.**
- 2.  **Lance le serveur** dans un premier terminal :
-     ```powershell
-     python app.py
-     ```
- 3.  **Lance les tests** dans un second terminal (à la racine du projet) :
+**Group:** DAI
 
-     Pour tout lancer d'un coup :
-     ```powershell
-     pytest
-     ```
+**Date:** 07/12/2025
 
-     Ou fichier par fichier :
-     ```powershell
-     pytest tests/test_unit.py
-     pytest tests/test_integration.py
-     pytest tests/test_e2e.py
+## Requirements
+
+Make sure the following are installed on your system:
+
+- [Python 3.11+](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/downloads)
+
+## Running the application locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/camm22/TP-Full-Dev-to-Prod-Pipeline-Exercise.git
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
+python -m venv .venv
+
+# On Windows
+.\.venv\Scripts\activate
+
+# On Mac/Linux
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Flask application
+
+```bash
+python -m app.app
+```
+
+The application will be accessible at:
+[http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+## Step of the lab
+
+- You can see all the step of the TP in the TP - Full-Dev-to-Prod-Pipeline-Exercise - Camille_Bordes word file.
+- You can see the video recording of the demonstration: video-recording.mkv
