@@ -43,7 +43,7 @@ jobs:
           # Cela permet à "app/app.py" de faire "from app.extensions import..." sans erreur
           export PYTHONPATH=$PYTHONPATH:.
           # 1. On lance l'app Flask en arrière-plan (note le dossier app/)
-          python app/app.py &
+          python -m app.app &
           # 2. Attendre que le serveur démarre
           sleep 5  
           # 3. Lancer les tests
